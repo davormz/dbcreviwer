@@ -15,7 +15,7 @@ public class DBCRbean extends BaseBean {
 	
 	private int nol; //Number of lines
 	
-	private int nos; //Number os sentences
+	private int nos; //Number of sentences
 	
 	private List<ErrorBean> errors;
 	
