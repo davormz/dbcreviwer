@@ -1,8 +1,9 @@
 package com.davo.dbcreviwer.io;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.List;
+
+import com.davo.dbcreviwer.domain.DBCRbean;
 
 /**
  * 
@@ -11,8 +12,8 @@ import java.util.List;
  */
 public interface FileLoader {
 	
-	List<String> loadFile(String location) throws IOException;
+	DBCRbean loadFile(String location) throws IOException;
 	
-	List<File> loadFolder(String location);
+	List<DBCRbean> loadFolder(String location)throws IOException;
 
 }

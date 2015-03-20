@@ -21,3 +21,8 @@ In an abstract pint of view dbcreviwer should do the following tasks:
 1. load a file or folder to analyze scripts.
 2. Show reports of files analized.
 3. Add, modify or delete rules to analyze scripts.
+
+## Compile and Run - So far
+### How to run it.
+After run the command 'mvn install' try:
+'java -cp target/dbcreviwer-1.0-SNAPSHOT.jar com.davo.App'

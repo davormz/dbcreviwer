@@ -17,6 +17,8 @@ public class DBCRbean extends BaseBean {
 	
 	private int nos; //Number of sentences
 	
+	private List<String> content;
+	
 	private List<ErrorBean> errors;
 	
 
@@ -50,6 +52,14 @@ public class DBCRbean extends BaseBean {
 
 	public void setNos(int nos) {
 		this.nos = nos;
+	}
+	
+	public List<String> getContent() {
+		return content;
+	}
+
+	public void setContent(List<String> content) {
+		this.content = content;
 	}
 
 	public List<ErrorBean> getErrors() {

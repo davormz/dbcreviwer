@@ -1,5 +1,7 @@
 package com.davo;
 
+import com.davo.dbcreviwer.view.GenericView;
+
 /**
  * Hello world!
  *
@@ -8,6 +10,6 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        GenericView app = new GenericView();
     }
 }
