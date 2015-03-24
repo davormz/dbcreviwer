@@ -7,7 +7,7 @@ import java.util.List;
  * @author davo
  *
  */
-public class DBCRbean extends BaseBean {
+public class DBCRBean extends BaseBean {
 	
 	private String fileName;
 	
@@ -83,7 +83,7 @@ public class DBCRbean extends BaseBean {
 
 	@Override
 	public boolean equals(Object obj) {
-		if(obj instanceof DBCRbean && ((DBCRbean)obj).getFileName().equals(this.getFileName())){
+		if(obj instanceof DBCRBean && ((DBCRBean)obj).getFileName().equals(this.getFileName())){
 			return true;
 		}else
 			return false;

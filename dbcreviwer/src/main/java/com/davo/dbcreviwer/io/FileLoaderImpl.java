@@ -7,10 +7,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.davo.dbcreviwer.domain.DBCRbean;
+import com.davo.dbcreviwer.domain.DBCRBean;
+
+
 
 /**
- * 
+ * Implementation of FileLoader.
  * @author davo
  *
  */
@@ -19,16 +21,17 @@ public class FileLoaderImpl implements FileLoader {
 	/**
 	 * 
 	 */
-	public DBCRbean loadFile(String location) throws IOException {
+	public DBCRBean loadFile(String location) throws IOException {
+		
 		File file = new File(location);
 		BufferedReader inputStream = null;
 		List<String> lines = null;
-		DBCRbean bean = null;
+		DBCRBean bean = null;
 		int nol = 0;
 		
 		if(file.exists() && file.isFile()){
 			try{
-				bean = new DBCRbean();
+				bean = new DBCRBean();
 				lines = new ArrayList<String>();
 				String line = new String();
 				inputStream = new BufferedReader(new FileReader(file));
@@ -47,11 +50,24 @@ public class FileLoaderImpl implements FileLoader {
 		return bean;
 	}
 
-	public List<DBCRbean> loadFolder(String location) {
-		// TODO Auto-generated method stub
+	public List<DBCRBean> loadFolder(String location) throws IOException {
+		File file = new File(location);
+		List<DBCRBean> dbcrBeans = null;
+		DBCRBean dbcrBean = null;
+		File files[];
 		
+		if(file.exists() && file.isDirectory()){
+			dbcrBeans = new ArrayList<DBCRBean>();
+			files = file.listFiles();
+			for(File f : files){
+				if(f.isFile()){
+					dbcrBean = loadFile(f.getPath());
+					dbcrBeans.add(dbcrBean);
+				}
+			}
+		}
 		
-		return null;
+		return dbcrBeans;
 	}
 
 
