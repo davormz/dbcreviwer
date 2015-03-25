@@ -33,7 +33,7 @@ INSERT INTO &&1..BATCH_JOB
   VALUES
   (
     (SELECT id FROM batch_job WHERE name='PI00C33100'),
-    'com.ohio.apsp.interfaces.tpl.OhioTplReader',
+    'Reader',
     'Y',
     'CssDev',
     'CssDev',
@@ -51,7 +51,7 @@ INSERT INTO &&1..BATCH_JOB
   )
   VALUES
   (
-    'xmlFileLocation.com.ohio.apsp.interfaces.tpl.OhioTplReader',
+    'Reader',
     'CssDev',
     'CssDev',
      SYSDATE,
@@ -68,7 +68,7 @@ INSERT INTO &&1..BATCH_JOB
   )
   VALUES
   (
-    'descriptive.com.ohio.apsp.interfaces.tpl.OhioTplReader',
+    'Reader',
     'CssDev',
     'CssDev',
      SYSDATE,
@@ -89,7 +89,7 @@ INSERT INTO &&1..BATCH_JOB
   (
     (SELECT id FROM batch_job WHERE name = 'PI00C33100' ),
     (SELECT id FROM batch_prop WHERE name = 'Module1' ),
-    'com.ohio.apsp.interfaces.tpl.OhioTplReader',
+    'Reader',
     'CssDev',
     'CssDev',
      SYSDATE,
@@ -109,8 +109,8 @@ INSERT INTO &&1..BATCH_JOB
   VALUES
   (
     (SELECT id FROM batch_job WHERE name = 'PI00C33100') ,
-    (SELECT id  FROM batch_prop  WHERE name = 'xmlFileLocation.com.ohio.apsp.interfaces.tpl.OhioTplReader' ),
-    '../config/OhioTPLReaderDefinition.xml',
+    (SELECT id  FROM batch_prop  WHERE name = 'Reader' ),
+    'ReaderDefinition.xml',
     'CssDev',
     'CssDev',
      SYSDATE,
@@ -132,7 +132,7 @@ INTO &&1..COMMON_BATCH_JOB_PROP
   (
     (SELECT id FROM batch_job WHERE name = 'PI00C33100'),
     (SELECT id FROM batch_prop WHERE name = 'logName'),
-    'OhioTplReader',
+    'Reader',
     'CssDev',
     'CssDev',
      SYSDATE,
@@ -196,7 +196,7 @@ INTO &&1..COMMON_BATCH_JOB_PROP
   VALUES
   (
     (SELECT id FROM batch_job WHERE name = 'PI00C33100'),
-    (SELECT id FROM batch_prop WHERE name = 'descriptive.com.ohio.apsp.interfaces.tpl.OhioTplReader' ),
+    (SELECT id FROM batch_prop WHERE name = 'Reader' ),
     'TST.SSA.STATE.TPL',
     'CssDev',
     'CssDev',
@@ -240,8 +240,8 @@ INTO &&1..PROD_BATCH_JOB_PROP
   VALUES
   (
     (SELECT id FROM batch_job WHERE name = 'PI00C33100') ,
-    (SELECT id FROM batch_prop WHERE name = 'descriptive.com.ohio.apsp.interfaces.tpl.OhioTplReader'),
-    'PRD.SSA.STATE.TPL',
+    (SELECT id FROM batch_prop WHERE name = 'Reader'),
+    'PRD.SSA',
     'CssDev',
     'CssDev',
     SYSDATE,
