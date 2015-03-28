@@ -14,3 +14,5 @@ hs_err_pid*
 # Environment folders.
 dbcreviwer/.classpath
 dbcreviwer/.project
+dbcreviwer/designs/DBCReviwer.zargo~
+
