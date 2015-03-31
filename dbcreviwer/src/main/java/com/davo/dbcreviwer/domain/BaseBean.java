@@ -1,12 +1,14 @@
 package com.davo.dbcreviwer.domain;
 
+import java.io.Serializable;
+
 /**
  * Base class for Model objects. Child objects should implement toString(),
  * equals() and hashCode().
  * @author <a href="davo.rmz@gmail.com">davo</a>
  *
  */
-public abstract class BaseBean {
+public abstract class BaseBean implements Serializable {
 	
 	/**
      * Returns a multi-line String with key=value pairs.
