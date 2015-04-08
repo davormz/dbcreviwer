@@ -43,6 +43,7 @@ public class FileLoaderImpl implements FileLoader {
 				bean.setNol(nol);
 				bean.setFileName(file.getName());
 				bean.setContent(lines);
+				bean.setFile(file);
 			}finally{
 				inputStream.close();
 			}

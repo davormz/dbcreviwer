@@ -1,5 +1,6 @@
 package com.davo.dbcreviwer.reviwer;
 
+import java.io.File;
 import java.util.List;
 
 import com.davo.dbcreviwer.domain.ErrorBean;
@@ -11,7 +12,7 @@ import com.davo.dbcreviwer.domain.ErrorBean;
  */
 public interface DocumentAnalyzer {
 	
-	List<ErrorBean> analyze(List<String> content);
+	void analyze(File document);
 	
 	
 }

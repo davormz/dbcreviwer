@@ -1,5 +1,6 @@
 package com.davo.dbcreviwer.domain;
 
+import java.io.File;
 import java.util.List;
 
 /**
@@ -8,6 +9,8 @@ import java.util.List;
  *
  */
 public class DBCRBean extends BaseBean {
+	
+	private File file;
 	
 	private String fileName;
 	
@@ -68,6 +71,21 @@ public class DBCRBean extends BaseBean {
 
 	public void setErrors(List<ErrorBean> errors) {
 		this.errors = errors;
+	}
+	
+	public String getFilePath(){
+		if(file != null)
+			return file.getAbsolutePath();
+		else
+			return null;
+	}
+
+	public File getFile() {
+		return file;
+	}
+
+	public void setFile(File file) {
+		this.file = file;
 	}
 
 	@Override

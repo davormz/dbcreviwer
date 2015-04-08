@@ -12,12 +12,13 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import com.davo.dbcreviwer.domain.DBCRBean;
+import com.davo.dbcreviwer.reviwer.DocumentAnalyzerImpl;
 
 public class FileLoaderTest {
 	
 	private FileLoader fileLoader;
 	
-	private static String RESOURCES_FOLDER = "src\\test\\resources";
+	private static String RESOURCES_FOLDER = "src" + File.separator + "test" + File.separator + "resources";
 	private static String WORKING_DIR = System.getProperty("user.dir");
 	private static String FILE_NAME = "ABMS_TPL_BATCH_INBOUND.sql";
 	
@@ -58,6 +59,15 @@ public class FileLoaderTest {
 		
 		Assert.assertTrue(beans.size() > 0);
 		
+	}
+	
+	@Test
+	public void firstLexerTest(){
+		DocumentAnalyzerImpl analyzer = new DocumentAnalyzerImpl();
+		String location = WORKING_DIR + File.separator + RESOURCES_FOLDER + File.separator + FILE_NAME;
+		File document = new File(location);
+		
+		analyzer.analyze(document);
 	}
 
 }
